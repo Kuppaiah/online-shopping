@@ -10,7 +10,24 @@ public class PageController {
 public ModelAndView index()
 {
 	ModelAndView mav=new ModelAndView("page");
-	mav.addObject("greeting", "hello");
+	mav.addObject("title", "Home");
+	mav.addObject("userClickHome", true);
+	return mav;
+}
+@RequestMapping(value="/about")
+public ModelAndView about()
+{
+	ModelAndView mav=new ModelAndView("page");
+	mav.addObject("title", "About us");
+	mav.addObject("userClickAbout", true);
+	return mav;
+}
+@RequestMapping(value="/contact")
+public ModelAndView contact()
+{
+	ModelAndView mav=new ModelAndView("page");
+	mav.addObject("title", "Contact us");
+	mav.addObject("userClickContact", true);
 	return mav;
 }
 }
